@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.bluelinelabs</groupId>
+  <artifactId>logansquare-compiler</artifactId>
+  <version>1.3.6</version>
+  <dependencies>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.2</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup</groupId>
+      <artifactId>javapoet</artifactId>
+      <version>1.2.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.bluelinelabs</groupId>
+      <artifactId>logansquare</artifactId>
+      <version>1.3.6</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
+  <name>LoganSquare</name>
+  <description>Screaming fast JSON parsing and serialization library for Android.</description>
+  <url>https://github.com/bluelinelabs/LoganSquare</url>
+  <organization>
+    <name>BlueLine Labs</name>
+    <url>http://bluelinelabs.com</url>
+  </organization>
+  <scm>
+    <connection>scm:git:https://github.com/bluelinelabs/LoganSquare</connection>
+    <developerConnection>scm:git:https://github.com/bluelinelabs/LoganSquare</developerConnection>
+    <url>https://github.com/bluelinelabs/LoganSquare</url>
+  </scm>
+  <developers>
+    <developer>
+      <id>erickuck</id>
+      <name>Eric Kuck</name>
+    </developer>
+  </developers>
+  <licenses>
+    <license>
+      <name>Apache 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+</project>

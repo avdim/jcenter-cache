@@ -5,5 +5,4 @@ libs/
 
 *.log*
 
-# maven cache
-maven/
+.idea

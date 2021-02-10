@@ -12,7 +12,7 @@ inciseBlue {
     ide()
     license()
     util {
-        javaVersion = JavaVersion.VERSION_13
+        javaVersion = JavaVersion.VERSION_11
     }
     maven {
         projectDescription = "A simple Maven cache server"

@@ -73,7 +73,7 @@ data class Config(
         private const val SERVERS = "servers"
         private const val CACHE_DIRECTORY = "cache-directory"
 
-        private val DEFAULT_PROPERTIES = LinkedHashMap<String, String>().apply {
+        val DEFAULT_PROPERTIES = LinkedHashMap<String, String>().apply {
             Config(
                 servers = listOf(
                     "https://jcenter.bintray.com",

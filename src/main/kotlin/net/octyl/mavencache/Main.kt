@@ -64,8 +64,20 @@ fun Application.mainModule(argv: Array<String>) {
         else -> "/etc/simple-maven-cache.properties"
     })
     LOGGER.info("Loading configuration from ${configLocation.toAbsolutePath()}")
-    val config = runBlocking {
-        Config.loadFrom(configLocation).also { it.saveTo(configLocation) }
+    val config: Config = if (true) {
+        val cacheDirectoryPath = Path.of("./my_maven_cache").toAbsolutePath()
+        LOGGER.info("cacheDirectoryPath: $cacheDirectoryPath")
+        Config(
+                servers = listOf(
+//                        "https://jcenter.bintray.com",
+                        "https://jitpack.io"
+                ),
+                cacheDirectory = cacheDirectoryPath
+        )
+    } else {
+        runBlocking {
+            Config.loadFrom(configLocation).also { it.saveTo(configLocation) }
+        }
     }
     config.logTo(LOGGER)
     val cacheManager = CacheManager(config.servers, config.cacheDirectory)

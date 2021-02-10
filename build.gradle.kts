@@ -31,7 +31,8 @@ dependencies {
     commonLib("io.ktor", "ktor", "1.3.1") {
         "implementation"(lib("server-core"))
         "implementation"(lib("server-netty"))
-        "implementation"(lib("client-okhttp"))
+        "implementation"(lib("client-okhttp"))//todo remove
+        "implementation"(lib("client-apache"))
     }
 }
 

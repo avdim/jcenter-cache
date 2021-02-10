@@ -19,6 +19,7 @@
 package net.octyl.mavencache
 
 import io.ktor.client.HttpClient
+import io.ktor.client.engine.apache.*
 import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.features.HttpRequestTimeoutException
 import io.ktor.client.features.HttpTimeout
@@ -68,17 +69,18 @@ class CacheManager(
         return cacheDirectory.resolve(path)
     }
 
-    private val client = HttpClient(OkHttp) {
+    private val client = HttpClient(Apache) {
         engine {
-            config {
-                followRedirects(true)
-            }
+            followRedirects = true
+//            config {
+//                followRedirects(true)
+//            }
         }
-        install(HttpTimeout) {
-            connectTimeoutMillis = 5000
-            requestTimeoutMillis = 5000
-            socketTimeoutMillis = 5000
-        }
+//        install(HttpTimeout) {
+//            connectTimeoutMillis = 5000
+//            requestTimeoutMillis = 5000
+//            socketTimeoutMillis = 5000
+//        }
     }
 
     suspend fun get(path: String): UpstreamResponse? {
@@ -121,11 +123,11 @@ class CacheManager(
             // otherwise, re-acquire lock
         }
         try {
-            var savedContent = false
+            var savedContent = false//todo bad
             for (server in servers) {
                 logger.debug("Trying to get '$path' from '$server'")
-                try {
-                    client.get<HttpStatement>("$server/$path").execute { response ->
+                try { val requestUrl = "$server/$path"
+                    client.get<HttpStatement>(requestUrl).execute { response ->
                         if (response.status.isSuccess()) {
                             logger.debug("Found '$path' at '$server'")
                             saveResponseToCache(UpstreamResponse(

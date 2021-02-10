@@ -96,6 +96,7 @@ fun Application.mainModule(argv: Array<String>) {
 private suspend fun PipelineContext<Unit, ApplicationCall>.handleMavenRequest(cacheManager: CacheManager) {
     try {
         val path = call.parameters.getAll("path").orEmpty().joinToString("/")
+        println("call: $call")
         val upstream = cacheManager.get(path)
         if (upstream == null) {
             call.respondText("No such entry found.",

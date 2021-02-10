@@ -70,7 +70,7 @@ fun Application.mainModule(argv: Array<String>) {
         Config(
                 servers = listOf(
                         "https://jcenter.bintray.com",
-//                        "https://jitpack.io"
+                        "https://jitpack.io"
                 ),
                 cacheDirectory = cacheDirectoryPath
         )

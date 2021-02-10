@@ -5,7 +5,7 @@ plugins {
     application
     id("com.techshroom.incise-blue") version "0.5.7"
     id("net.researchgate.release") version "2.8.1"
-    kotlin("jvm") version "1.3.61"
+    kotlin("jvm") version "1.4.30"
 }
 
 inciseBlue {

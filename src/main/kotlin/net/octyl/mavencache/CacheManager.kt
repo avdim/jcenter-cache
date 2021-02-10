@@ -20,7 +20,6 @@ package net.octyl.mavencache
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.apache.*
-import io.ktor.client.engine.okhttp.OkHttp
 import io.ktor.client.features.HttpRequestTimeoutException
 import io.ktor.client.features.HttpTimeout
 import io.ktor.client.request.get

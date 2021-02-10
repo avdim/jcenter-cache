@@ -69,8 +69,8 @@ fun Application.mainModule(argv: Array<String>) {
         LOGGER.info("cacheDirectoryPath: $cacheDirectoryPath")
         Config(
                 servers = listOf(
-//                        "https://jcenter.bintray.com",
-                        "https://jitpack.io"
+                        "https://jcenter.bintray.com",
+//                        "https://jitpack.io"
                 ),
                 cacheDirectory = cacheDirectoryPath
         )

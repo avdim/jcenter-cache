@@ -1,1 +1,3 @@
-rootProject.name = "simple-maven-cache"
+rootProject.name = "jcenter-cache"
+
+include("cache-server")

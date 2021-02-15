@@ -1,2 +1,2 @@
 #!/bin/bash
-./gradlew artifact-lib:publishTestPublicationToMavenLocal
+./gradlew artifact-lib:publishAllPublicationToMavenLocal

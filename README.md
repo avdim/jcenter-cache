@@ -1,3 +1,5 @@
+Deprecated (moved to github.com/tutu-ru-mobile/gradle-plugin-dependencies-to-files)
+
 Fork from https://github.com/octylFractal/simple-maven-cache 
 
 simple-maven-cache
